@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>plans </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.2.0/js/bootstrap.min.js"></script>
+    {% load static %}
+    <link href="{% static 'css/style.css' %}" rel='stylesheet'>
+  <style>
+    *{ font-family:arial
+    }
+    td, th {
+  width: 8rem;
+  height: 6rem;
+  border: 1px solid black;
+  text-align: center;
+}
+th {
+  background: lightblue;
+  border-color: black;
+}
+body {
+  padding: 1rem;
+}
+
+  </style>
+</head>
+<body>
+
+
+<center>
+    <div class="page-header" style="background-color:#bacacf;" >
+        <h1 align="center" style="font-size:60px; color:black"> View Plans </h1>
+
+</div>
+<div class="container" >
+  <div class="row">
+      <h3>Prepaid</h3>
+        <table style="background-color:#bacacf;">
+            <tr>
+            <th> Plan Name</th>
+                <th> Validity </th>
+            <th> Data Per Day</th>
+            </tr>
+              {% for i in records %}
+          <tr>
+            <td>{{i.cost}} </td>
+            <td>{{i.data_day}}</td>
+            <td>{{i.validity}}</td>
+          </tr>
+          {% endfor %}
+        </table> <br>
+
+      <h3>Postpaid </h3>
+        <table style="background-color:#bacacf;">
+            <tr>
+            <th> Plan Name</th>
+                <th> Total Data </th>
+            <th> Validity </th>
+            </tr>
+            {% for i in res %}
+          <tr>
+            <td>{{i.cost}} </td>
+            <td>{{i.total_data}}</td>
+            <td>{{i.validity}}</td>
+          </tr>
+          {% endfor %}
+        </table> <br>
+
+      <h3>Dongle </h3>
+      <table style="background-color:#bacacf;">
+            <tr>
+            <th> Plan Name</th>
+                <th> Validity </th>
+            <th> Data Per Day</th>
+            </tr>
+            {% for i in result %}
+          <tr>
+            <td>{{i.cost}} </td>
+            <td>{{i.data_day}}</td>
+            <td>{{i.validity}}</td>
+          </tr>
+          {% endfor %}
+        </table>
+    </div>
+  </div>
+</center>
+</body>
+</html>

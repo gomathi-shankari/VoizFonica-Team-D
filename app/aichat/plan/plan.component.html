@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>offers</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.2.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+</head>
+<style>
+  div.container {
+  text-align: center;
+    display: inline-block;
+}
+.user_card {
+			width: 1000px;
+			margin-top: auto;
+			margin-bottom: auto;
+			margin-left: 250px;
+			background:#bacacf;
+			position: relative;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			padding: 10px;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			border-radius: 5px;
+
+		}
+		td,th {
+  text-align: center;
+}
+tr:hover {background-color: gray;}
+
+body {
+  padding: 1rem;
+}
+</style>
+<body>
+<div class="page-header"></div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="user_card">
+        <div class="d-flex justify-content-center">
+          <p>Unable to see plans : 1</p><br>
+          <p>Prepaid: 2</p><br>
+          <p>Postpaid: 3</p><br>
+          <p>Dongle: 4</p><br>
+          <form [formGroup] ="Form2" (ngSubmit) ="get()">
+            <input type ="number" uname="uname" formControlName="name2"> <br>
+            <button type ="submit"> Submit </button>
+
+          <div [ngSwitch]="plan">
+            <p *ngSwitchCase ="'Unable to see plans '">
+              * Please log out and log in again. Check plans under prepaid, postpaid and dongle.
+            </p>
+            <p *ngSwitchCase ="'What is prepaid?'">
+              * Prepaid is a telecom service plan where you are billed a predetermined amount before you can use the services.
+              Plans vary from 24 days to 1 year.
+            </p>
+            <p *ngSwitchCase ="'What is postpaid?'">
+              * Postpaid is a telecom service plan where you are billed a predetermined amount at the end of the month of usage.
+              The month is called the billing cycle and may not refer to a calendar month.
+            </p>
+            <p *ngSwitchCase ="'What is dongle?'">
+              * A dongle is a small USB 'internet stick' that allows you to access online services without needing to connect to Wi-Fi.
+              Plans for dongle are mentioned on the home page.
+            </p>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+
+<router-outlet></router-outlet>
+

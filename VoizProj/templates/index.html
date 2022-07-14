@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>VoizFonica</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.2.0/js/bootstrap.min.js"></script>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <style>
+     *{ font-family:Arial }
+     .login_btn {
+			background: gray !important;
+			color: white !important;}
+			.container{
+    background-color: white ;
+}
+.button {
+  background-color: #ededed;
+  border-radius: 8px;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.button5:hover {
+border-radius: 8px;
+  background-color: gray;
+  color: white;
+}
+</style>
+  {% load static %}
+     <link href="{% static 'css/style.css' %}" rel='stylesheet'>
+</head>
+<body style="background-color:#bacacf;"> <center>
+<div class ="page-header" style="background-color: #bacacf;">
+<h1 align="center" style="font-size:60px; color:black;"> <img src = "{% static '/logo.jfif' %}" width="70"
+     height="70"><strong> VoizFonica </strong></h1>
+  <h3 style="text-align:center; font-family: Arial; font-weight: normal;"> <em> Life’s better with VoizFonica</em> </h3>
+</div> <br><br>
+    <div class="container">
+        <div class="row">
+          <div class ="col-sm-6">
+          <img src = "{% static '/login.webp' %}"width="500" height="500"> </div>
+            <div style="align=right;">
+                <br> <br> <br><br> <br> <br><br> <br> <br><br> <br> <br>
+              <button class =" button button5">
+                <a href= "/login"> Login! </a></button>
+            </div>
+          </div> <br>
+    </div>
+  <br><br>
+      <div class="container">
+        <div class="row">
+          <div class ="col-sm-6">
+            <br><br>
+          <img src = "{% static '/sim.png' %}"width="200" height="200"> </div>
+            <div style="align=right;">
+                <br> <br> <br><br> <br><br>
+              <button class =" button button5">
+                <a href= "/home"> Buy New Sim! </a></button>
+            </div>
+          </div> <br>
+    </div>
+  <br><br>
+      <div class ="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>View Plans</h3>
+                <br>
+                <a href="/viewplans">
+                    <input type="button" class="btn login_btn"value="View Plans"></a>
+            </div>
+            <div class="col-sm-6">
+                <h3>Offers </h3>
+                <br>
+                <a href="/offers">
+                    <input type="button" class="btn login_btn"value="Offers"></a>
+            </div>
+        </div> <br><br>
+
+    </div> <br><br><br><br><br><br><br><br><br>
+
+
+ <div class="page-footer">
+            <h4 style="text-align:center; font-family: Arial; font-weight: bold;"> <em>Follow us on:  </em> </h4>
+            <h4><i class="icon-twitter on icon-check-empty"></i></h4>
+           <h4><i class="icon-facebook on icon-check-empty"></i></h4>
+           <h4><i class="icon-instagram on icon-check-empty"></i></h4>
+
+    </div>
+</center>
+</body>
+</html>

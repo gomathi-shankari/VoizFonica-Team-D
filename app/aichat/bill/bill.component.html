@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>offers</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.2.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+</head>
+<style>
+  div.container {
+  text-align: center;
+    display: inline-block;
+}
+.user_card {
+			width: 1000px;
+			margin-top: auto;
+			margin-bottom: auto;
+			margin-left: 250px;
+			background:#bacacf;
+			position: relative;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			padding: 10px;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			border-radius: 5px;
+
+		}
+		td,th {
+  text-align: center;
+}
+tr:hover {background-color: gray;}
+
+body {
+  padding: 1rem;
+}
+</style>
+<body>
+<div class="page-header"></div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="user_card">
+        <div class="d-flex justify-content-center">
+          <p>Bill due: 1</p>
+          <p>Download bill: 2</p>
+          <p>Bill issues: 3</p>
+          <p>Bill not generated: 4</p>
+
+          <form [formGroup] ="Form2" (ngSubmit) ="get()">
+            <input type ="number" uname="uname" formControlName="name2"> <br>
+            <button type ="submit"> Submit </button>
+
+            <div [ngSwitch]="Bill">
+              <p *ngSwitchCase ="'when is my bill due?'">
+                * Your bill is due between the first and fifth of every month.
+              </p>
+              <p *ngSwitchCase ="'How to download my bill?'">
+                * On the home page, click on the invoice link. (Invoice is only generated for postpaid and dongle customers.)
+              </p>
+              <p *ngSwitchCase ="'Who do I contact for bill issues'">
+                * Use the grievances link or call customer care by dialing ###.
+              </p>
+              <p *ngSwitchCase ="'Bill not generated'">
+                * Check invoice on the home page. If it is still not visible, raise a ticket using the grievances link.
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+
+<router-outlet></router-outlet>
+
+
+

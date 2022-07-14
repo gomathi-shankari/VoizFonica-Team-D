@@ -1,0 +1,37 @@
+<h1>technical related issues</h1>
+<p>Network coverage issue -1</p>
+<p>Frequent disconnections -2</p>
+<p>Dongle connectivity essues -3</p>
+<p>No connectivity -3</p>
+
+<form [formGroup] ="Form2" (ngSubmit) ="get()">
+  <input type ="number" uname="uname" formControlName="name2"> <br>
+  <button type ="submit"> Submit </button>
+</form>
+
+<div [ngSwitch]="technical">
+
+  <p *ngSwitchCase ="'Network coverage issue'">
+    *restart your system <br>
+    *you are facing issue because of weather condition. <br>
+    * If you are still facing an issue, raise a ticket.
+  </p>
+  <p *ngSwitchCase ="'Frequent disconnections'">
+    * Try restarting ur system <br>
+    * Your speed can be slow due to bad weather conditions <br>
+    * If you are still facing an issue, raise a ticket.
+  </p>
+  <p *ngSwitchCase ="'Dongle connectivity issues'">
+    * Try restarting ur system <br>
+    * Your speed can be slow due to bad weather conditions <br>
+    * If you are still facing an issue, raise a ticket.
+  </p>
+  <p *ngSwitchCase ="'No connectivity'">
+    * Try restarting ur system <br>
+    * Your speed can be slow due to bad weather conditions <br>
+    * Check your plan <br>
+    * If you are still facing an issue, raise a ticket.
+  </p>
+
+
+</div>

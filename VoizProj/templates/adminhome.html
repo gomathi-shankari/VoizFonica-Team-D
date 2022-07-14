@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Home</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+     <style>
+        table,th,td{
+        border: 1px solid black;
+        width:100px;
+        }
+    </style>
+</head>
+<body style="background-color:#bacacf;">
+<center>
+    <h1>PrePaid Plans</h1>
+  <table style="background-color:white;">
+    <tr>
+      <th> Plan Name</th>
+      <th> Validity </th>
+      <th> Data Per Day</th>
+    </tr>
+    {% for i in records %}
+    <tr>
+      <td>{{i.cost}} </td>
+      <td>{{i.data_day}}</td>
+      <td>{{i.validity}}</td>
+      <a href="/update/{{i.id}}" style="color:#2F4F4F;">Edit</a>
+      <a href="/delete/{{i.id}}" style="color:#2F4F4F;">Delete</a>
+    </tr>
+    {% endfor %}
+  </table>
+</center>
+</body>
+</html>
+
+

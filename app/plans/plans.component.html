@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>offers</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.2.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+
+  <style>
+    *{ font-family:arial
+    }
+ul.no-bullets {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+div.container {
+  text-align: center;
+    display: inline-block;
+}
+.user_card {
+			width: 380px;
+			margin-top: auto;
+			margin-bottom: auto;
+			background: #dbdbdb;
+			position: relative;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			padding: 10px;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			border-radius: 5px;
+
+		}
+
+body {
+  padding: 1rem;
+}
+
+  </style>
+</head>
+<body>
+<!--<div class="page-header">-->
+<!--</div>-->
+<!--<div class="container">-->
+<!--  <div class="row">-->
+<!--    <div class="col-sm-4">-->
+<!--      <div class="user_card">-->
+<!--        <div class="d-flex justify-content-center">-->
+<!--          <h3> <i class="fas fa-address-card"></i>  Plan Details: </h3>-->
+<!--          <ul class="no-bullets">-->
+<!--            <li><i class="fas fa-list"></i> <strong> Plan Name: </strong></li> <br>-->
+<!--            <li><i class="fas fa-arrow-down"></i><i class="fas fa-arrow-up"></i> <strong> Data Used: </strong> </li><br>-->
+<!--            <li><i class="fas fa-calendar-day"></i> <strong> Validity: </strong> </li> <br>-->
+<!--            <li><i class="fas fa-money-bill-wave"></i> <strong> Amount Paid: </strong> </li> <br>-->
+<!--          </ul>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<table>
+  <tr>
+  <th> Cost </th>
+  <th> Data per day </th>
+    <th> Validity </th>
+    <th> Amount </th>
+  </tr>
+  <tr *ngFor="let item of items">
+    <td> {{ item.plan_name }} </td>
+    <td>{{ item.usage }}
+    <td>{{ item.validity }}</td>
+    <td>{{ item.amount }}</td>
+  </tr>
+</table>
+{{ error?.message }}
+</body>
+</html>
